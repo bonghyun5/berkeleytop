@@ -1,4 +1,11 @@
 <%= render :template => 'layouts/member_header.html.erb'%>
+<% if User.find(session[:user_id], conditions: { :super_admin => true}) and !User.find(:all, conditions: {:approved => false}).empty? %>
+	<div class = "row">
+		<div class = "twelve columns">
+	<b>New User Alert</b>
+	</div></div>
+	</br>
+<%end%>
 
 <div class = "row">
 	<div class = "twelve columns">

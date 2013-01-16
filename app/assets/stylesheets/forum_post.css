@@ -43,6 +43,11 @@
 	margin: 0;
 }
 
+.forum-post-title a
+{
+	color: #26466D;
+}
+
 .forum-post-info
 {
 	margin:0;
