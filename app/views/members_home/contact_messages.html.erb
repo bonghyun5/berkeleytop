@@ -35,7 +35,7 @@
 					<% if contact_info.user != nil %>
 						<%= User.find(contact_info.user).name %>
 					<% else %>
-					   
+
 					<% end %>
 				</td>
 				<td><%= link_to "View", edit_contact_info_path(contact_info) %></td>

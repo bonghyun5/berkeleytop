@@ -12,11 +12,11 @@ class MembersHomeController < ApplicationController
   end
   
   def contact_messages
-    @contact_infos = ContactInfo.all
+    @contact_infos = ContactInfo.order('created_at DESC').all
   end
   
   def email_signups
-    @emails = Email.all
+    @emails = Email.order('created_at DESC').all
   end
   
   def test_bank

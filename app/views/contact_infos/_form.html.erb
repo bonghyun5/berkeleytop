@@ -41,7 +41,7 @@
 	<%= f.label :comment %>
 	<%= f.text_area :comment, rows: 6, class: "seven" %>
   </div>
-	<% if :status == "Contacted"%>
+	<% if :status != "Contacted"%>
 		<%= f.hidden_field :user, :value => session[:user_id] %>
 	<% else %>
 	<% end %>
