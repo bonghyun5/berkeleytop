@@ -21,7 +21,7 @@ html
 body
 {
 	background: transparent !important;
-	zoom: 100% !important;
+	zoom: 90% !important;
 	height: 100%;
 }
 
@@ -448,7 +448,8 @@ select
   content: "\f015";
 }
 
-.foundicon1-up-arrow:before {
+.foundicon1-up-arrow
+:before {
   content: "\f016";
 }
 
