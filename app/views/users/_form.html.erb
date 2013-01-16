@@ -16,14 +16,24 @@
     <%= f.label :email %>
     <%= f.text_field :email, class: "six" %>
   </div>
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: "six" %>
+  <div class ="field">
+	<%= f.label :name %>
+	<%= f.text_field :name, class: "six"%>
   </div>
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "six" %>
+  </div>
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: "six" %>
+  </div>
+  <% if User.find_by_id(session[:user_id])%>
   <div class = "field">
 	<%= f.label :approved %>
 	<%= f.text_field :approved, class: "six" %>
   </div>
+ <%end%>
 
   <div class="actions">
     <%= f.submit "Submit", class: "medium button" %>
