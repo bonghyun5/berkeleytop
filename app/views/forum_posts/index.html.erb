@@ -1,0 +1,31 @@
+<h1>Listing forum_posts</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>User</th>
+    <th>Upvote</th>
+    <th>Downvote</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @forum_posts.each do |forum_post| %>
+  <tr>
+    <td><%= forum_post.title %></td>
+    <td><%= forum_post.description %></td>
+    <td><%= forum_post.user_id %></td>
+    <td><%= forum_post.upvote %></td>
+    <td><%= forum_post.downvote %></td>
+    <td><%= link_to 'Show', forum_post %></td>
+    <td><%= link_to 'Edit', edit_forum_post_path(forum_post) %></td>
+    <td><%= link_to 'Destroy', forum_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Forum post', new_forum_post_path %>

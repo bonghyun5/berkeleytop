@@ -1,0 +1,108 @@
+#forum-table
+{
+	font: normal x-small verdana,arial,helvetica,sans-serif;
+}
+
+.forum-order
+{
+	vertical-align: middle !important;
+	padding: 0 25px;
+	width: 10px;
+	color: grey;
+	font-weight: bold;
+	font-family: arial;
+}
+
+.forum-vote-count
+{
+	padding: 5px 20px 0 0;
+	width: 20px;
+	vertical-align: middle !important;
+}
+
+.forum-vote-count i
+{
+	font-size: 17px;
+	margin: 13px;
+	color: grey;
+}
+
+.forum-count
+{
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	color: #C6C6C6;
+	margin: 4px 0 7px 0;
+}
+
+.forum-post-title
+{
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.forum-post-info
+{
+	margin:0;
+	font-size: 11px;
+	color: #888;
+}
+
+.forum-number-comments
+{
+	margin:0;
+	font-size: 11px;
+	font-weight: bold;
+	color: #888;
+}
+
+#forum-post-create-box p
+{
+	background-color: #F6E69F;
+	padding: 10px 5px 10px 20px;
+	border: 1px solid orange;
+	font: normal small verdana,arial,helvetica,sans-serif;
+}
+
+#tab1
+{
+	border: 1px dashed;
+}
+
+.forum-post-description
+{
+	margin: 5px 0;
+	background-color: white;
+	border: 1px solid #369;
+	border-radius: 7px;
+	padding: 2px 5px;
+	font: normal small verdana,arial,helvetica,sans-serif;
+}
+
+#comment-table p
+{
+	margin: 0;
+}
+
+#comment-top
+{
+	font: normal, small verdana,arial,helvetica,sans-serif;
+	color: #888;
+	font-size: 13px;
+}
+
+#comment-top b
+{
+	color: #369;
+	font-weight: bold;
+	font-size: 15px;
+	margin-right: 5px;
+}
+
+#comment-message
+{
+	font: normal, verdana,arial,helvetica,sans-serif;
+	font-size: 15px;
+}

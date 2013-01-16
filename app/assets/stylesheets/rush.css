@@ -1,0 +1,24 @@
+#rush-poster
+{
+	width: 100%;
+}
+
+#rush-application
+{
+	width: 100%;
+	margin-top: 10px;
+	background-color:rgb(114,158,177);
+	border-radius: 10px;
+	border: none;
+}
+
+#rush-dates
+{
+	background-color: rgb(90,93,92);
+	padding: 20px 30px 30px 30px;
+}
+
+#rush-dates h4
+{
+	color: #9BC4E2;
+}

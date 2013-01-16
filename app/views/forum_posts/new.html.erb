@@ -1,0 +1,19 @@
+<%= render :template => 'layouts/member_header.html.erb'%>
+
+<div class = "row">
+	<div class ="eight columns" id = "forum-post-create-box">
+		<p>You are submitting a text-based post. Speak your mind. A title is required, but expanding further in the text field is not. Beginning your title with "vote up if" is violation of intergalactic law.</p>
+	</div>
+</div>
+
+
+<div class = "row">
+	<div class ="twelve columns">
+
+		<%= render 'form' %>
+		<%= link_to "Back", member_index_path, class: "small button"%>
+		</br>
+		</br>
+		
+	</div>
+</div>

@@ -1,0 +1,551 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require foundation_and_overrides
+ *= require_tree .
+ */
+html 
+{
+	height: 100%;
+	
+}
+
+body
+{
+	background: transparent !important;
+	zoom: 100% !important;
+	height: 100%;
+}
+
+#calendar table
+{
+	border: none;
+}
+.top-bar
+{
+  height: 100px;
+  margin: 0 !important;
+  width: 100%;
+}
+
+.name 
+{
+  height: 45px;
+}
+
+.name h1
+{
+  margin: 0;
+}
+
+.name a
+{
+  font-size: 17px !important;
+}
+
+#att
+{
+  width: 1080px;
+  margin: 0 auto;
+}
+
+#nav-crest
+{
+	height: 40px;
+	width: 40px;
+}
+
+#nav-left
+{
+  margin-left: 60px;
+}
+
+#nav-right
+{
+	margin-left: 0px;
+  	margin-right: 60px;
+}
+
+#move-left
+{
+	margin-left: 35px;
+}
+
+#subscription-container
+{
+  width: 100%;
+  height: 60px;
+  background-color: #EEEEEE;
+}
+
+#sub h5
+{
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+#subscribe h5
+{
+  margin-top: 5px;
+  font-weight: 300;
+  color: #26466D;
+  text-align: center;
+}
+
+
+#submit-button
+{
+  margin-left: 0px;
+  margin-top: 2px;
+}
+
+#footer-container
+{
+  width: 100%;
+  background-color: #3F3F3F;
+}
+
+
+#footer p
+{
+	text-align: center;
+	color: white;
+  	margin-top: 10px;
+}
+
+.very-bottom, .push
+{
+	height: 5px;
+}
+
+.wrap-bottom
+{
+	min-height: 88%;
+	height: auto !important;
+	height: 88%;
+	margin: 0 auto -5px;
+}
+
+
+.sub-links
+{
+  width: 100%;
+  padding: 20px;
+  background-color: #26466D;
+}
+
+.sub-links h1
+{
+  color: white;
+  font-weight: 300;
+}
+
+.sub-links h4
+{
+  color: white;
+  font-weight: 300;
+}
+
+
+.main-content
+{
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.main-content h4
+{
+  font-weight: 300;
+}
+
+select
+{
+	margin-top: 5px;
+	width: auto !important;
+}
+
+
+#error_explanation li{
+  list-style: none; 
+}
+
+
+/* font-face */
+@font-face {
+  font-family: "SocialFoundicons";
+  src: url("fonts/social_foundicons.eot");
+  src: url("fonts/social_foundicons.eot?#iefix") format("embedded-opentype"), url("fonts/social_foundicons.woff") format("woff"), url("fonts/social_foundicons.ttf") format("truetype"), url("fonts/social_foundicons.svg#SocialFoundicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* global foundicon styles */
+[class*="foundicon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+[class*="foundicon-"]:before {
+  font-family: "SocialFoundicons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+}
+
+/* icons */
+.foundicon-thumb-up:before {
+  content: "\f000";
+}
+
+.foundicon-thumb-down:before {
+  content: "\f001";
+}
+
+.foundicon-rss:before {
+  content: "\f002";
+}
+
+.foundicon-facebook:before {
+  content: "\f003";
+}
+
+.foundicon-twitter:before {
+  content: "\f004";
+}
+
+.foundicon-pinterest:before {
+  content: "\f005";
+}
+
+.foundicon-github:before {
+  content: "\f006";
+}
+
+.foundicon-path:before {
+  content: "\f007";
+}
+
+.foundicon-linkedin:before {
+  content: "\f008";
+}
+
+.foundicon-dribbble:before {
+  content: "\f009";
+}
+
+.foundicon-stumble-upon:before {
+  content: "\f00a";
+}
+
+.foundicon-behance:before {
+  content: "\f00b";
+}
+
+.foundicon-reddit:before {
+  content: "\f00c";
+}
+
+.foundicon-google-plus:before {
+  content: "\f00d";
+}
+
+.foundicon-youtube:before {
+  content: "\f00e";
+}
+
+.foundicon-vimeo:before {
+  content: "\f00f";
+}
+
+.foundicon-flickr:before {
+  content: "\f010";
+}
+
+.foundicon-slideshare:before {
+  content: "\f011";
+}
+
+.foundicon-picassa:before {
+  content: "\f012";
+}
+
+.foundicon-skype:before {
+  content: "\f013";
+}
+
+.foundicon-steam:before {
+  content: "\f014";
+}
+
+.foundicon-instagram:before {
+  content: "\f015";
+}
+
+.foundicon-foursquare:before {
+  content: "\f016";
+}
+
+.foundicon-delicious:before {
+  content: "\f017";
+}
+
+.foundicon-chat:before {
+  content: "\f018";
+}
+
+.foundicon-torso:before {
+  content: "\f019";
+}
+
+.foundicon-tumblr:before {
+  content: "\f01a";
+}
+
+.foundicon-video-chat:before {
+  content: "\f01b";
+}
+
+.foundicon-digg:before {
+  content: "\f01c";
+}
+
+.foundicon-wordpress:before {
+  content: "\f01d";
+}
+
+
+
+
+
+/* font-face */
+@font-face {
+  font-family: "GeneralEnclosedFoundicons";
+  src: url("fonts/general_enclosed_foundicons.eot");
+  src: url("fonts/general_enclosed_foundicons.eot?#iefix") format("embedded-opentype"), url("fonts/general_enclosed_foundicons.woff") format("woff"), url("fonts/general_enclosed_foundicons.ttf") format("truetype"), url("fonts/general_enclosed_foundicons.svg#GeneralEnclosedFoundicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* global foundicon styles */
+[class*="foundicon1-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+[class*="foundicon1-"]:before {
+  font-family: "GeneralEnclosedFoundicons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+}
+
+/* icons */
+.foundicon1-settings:before {
+  content: "\f000";
+}
+
+.foundicon1-heart:before {
+  content: "\f001";
+}
+
+.foundicon1-star:before {
+  content: "\f002";
+}
+
+.foundicon1-plus:before {
+  content: "\f003";
+}
+
+.foundicon1-minus:before {
+  content: "\f004";
+}
+
+.foundicon1-checkmark:before {
+  content: "\f005";
+}
+
+.foundicon1-remove:before {
+  content: "\f006";
+}
+
+.foundicon1-mail:before {
+  content: "\f007";
+}
+
+.foundicon1-calendar:before {
+  content: "\f008";
+}
+
+.foundicon1-page:before {
+  content: "\f009";
+}
+
+.foundicon1-tools:before {
+  content: "\f00a";
+}
+
+.foundicon1-globe:before {
+  content: "\f00b";
+}
+
+.foundicon1-home:before {
+  content: "\f00c";
+}
+
+.foundicon1-quote:before {
+  content: "\f00d";
+}
+
+.foundicon1-people:before {
+  content: "\f00e";
+}
+
+.foundicon1-monitor:before {
+  content: "\f00f";
+}
+
+.foundicon1-laptop:before {
+  content: "\f010";
+}
+
+.foundicon1-phone:before {
+  content: "\f011";
+}
+
+.foundicon1-cloud:before {
+  content: "\f012";
+}
+
+.foundicon1-error:before {
+  content: "\f013";
+}
+
+.foundicon1-right-arrow:before {
+  content: "\f014";
+}
+
+.foundicon1-left-arrow:before {
+  content: "\f015";
+}
+
+.foundicon1-up-arrow:before {
+  content: "\f016";
+}
+
+.foundicon1-down-arrow:before {
+  content: "\f017";
+}
+
+.foundicon1-trash:before {
+  content: "\f018";
+}
+
+.foundicon1-add-doc:before {
+  content: "\f019";
+}
+
+.foundicon1-edit:before {
+  content: "\f01a";
+}
+
+.foundicon1-lock:before {
+  content: "\f01b";
+}
+
+.foundicon1-unlock:before {
+  content: "\f01c";
+}
+
+.foundicon1-refresh:before {
+  content: "\f01d";
+}
+
+.foundicon1-paper-clip:before {
+  content: "\f01e";
+}
+
+.foundicon1-video:before {
+  content: "\f01f";
+}
+
+.foundicon1-photo:before {
+  content: "\f020";
+}
+
+.foundicon1-graph:before {
+  content: "\f021";
+}
+
+.foundicon1-idea:before {
+  content: "\f022";
+}
+
+.foundicon1-mic:before {
+  content: "\f023";
+}
+
+.foundicon1-cart:before {
+  content: "\f024";
+}
+
+.foundicon1-address-book:before {
+  content: "\f025";
+}
+
+.foundicon1-compass:before {
+  content: "\f026";
+}
+
+.foundicon1-flag:before {
+  content: "\f027";
+}
+
+.foundicon1-location:before {
+  content: "\f028";
+}
+
+.foundicon1-clock:before {
+  content: "\f029";
+}
+
+.foundicon1-folder:before {
+  content: "\f02a";
+}
+
+.foundicon1-inbox:before {
+  content: "\f02b";
+}
+
+.foundicon1-website:before {
+  content: "\f02c";
+}
+
+.foundicon1-smiley:before {
+  content: "\f02d";
+}
+
+.foundicon1-search:before {
+  content: "\f02e";
+}
+
+

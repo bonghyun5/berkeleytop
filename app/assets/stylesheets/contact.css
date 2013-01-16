@@ -1,0 +1,16 @@
+#message-area
+{
+	height: 200px;
+}
+
+#contact-message h5
+{
+	color: #26466D;
+	font-weight: 300;
+}
+
+#contact-message h6
+{
+	color: red;
+	margin: 0;
+}

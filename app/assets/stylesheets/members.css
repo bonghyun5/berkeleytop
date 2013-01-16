@@ -1,0 +1,25 @@
+#member-explain h3
+{
+	font-weight: 300;
+}
+
+#member-explain h5
+{
+	font-weight: 200;
+}
+
+#contact-table
+{
+	margin-top: 10px;
+}
+
+#contact-info-edit label
+{
+	margin-top: 10px;
+	font-weight: 300;
+}
+
+#contact-info-edit p
+{
+	font-weight: 600;
+}

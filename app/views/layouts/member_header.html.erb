@@ -1,0 +1,60 @@
+<header class = "sub-links">
+  <div class = "row">
+    <div class = "twelve columns">
+      <h1> Members </h1>
+      <h4> Member's Corner</h4>
+    </div>
+  </div>
+</header>
+<div class ="row">
+  <div class ="twelve columns">
+
+    <dl class="sub-nav" id = "login-sub">
+      <% if current_page? :action => "index", :controller => "members_home" %>
+	  	<dd class = "active">
+	  <% else %>
+		<dd>
+      <% end %>
+	    <%= link_to "Home / Forum", member_index_path %></dd>
+	  <% if current_page? :action => "events", :controller => "members_home" %>
+	  	<dd class = "active">
+	  <% else %>
+		<dd>
+      <% end %>
+        <%= link_to "Events", member_events_path %></dd>
+      <% if current_page? :action => "directory", :controller => "members_home" %>
+	  	<dd class = "active">
+	  <% else %>
+		<dd>
+      <% end %>
+      <%= link_to "Directory", member_directory_path %></dd>
+      <% if current_page? :action => "contact_messages", :controller => "members_home" %>
+	  	<dd class = "active">
+	  <% else %>
+		<dd>
+      <% end %>
+	  <%= link_to "Contact Messages", member_contact_messages_path %></dd>
+	  <% if current_page? :action => "email_signups", :controller => "members_home" %>
+	  	<dd class = "active">
+	  <% else %>
+		<dd>
+      <% end %>
+	  <%= link_to "Email Signups", member_email_signups_path %></dd>
+ 
+      <% if current_page? :action => "rush_applications", :controller => "members_home" %>
+	  	<dd class = "active">
+	  <% else %>
+		<dd>
+      <% end %>
+	  <%= link_to "Rush Applications", member_rush_applications_path %></dd>	  
+	
+	  <% if current_page? :action => "test_bank", :controller => "members_home" %>
+	  	<dd class = "active">
+	  <% else %>
+		<dd>
+      <% end %>
+      <%= link_to "Test Bank", member_test_bank_path %></dd>
+    </dl>
+
+  </div>
+</div>

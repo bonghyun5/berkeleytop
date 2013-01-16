@@ -1,0 +1,41 @@
+<%= render template: 'layouts/member_header.html.erb'%>
+
+<div class = "main-content" id ="login-main">
+	<div class = "row">
+		<div class ="two columns">
+			<ul class = "side-nav">
+				  <li><%= link_to "← Home", index_path%></li>		
+				  <li class="divider"></li>
+				  <li class = "active"><%= link_to "Login", login_path%></li>
+				   <li><%= link_to "Register", register_path %></li>
+
+			</ul>
+		</div>
+		<div class ="ten columns">
+			<h4> Login </h4>
+			<% if notice %>
+			<h5 id = "notice"> <%= notice %> </h5>
+			<% else %>
+			<h5> You must login to continue </h5>
+			<h5> The contents on this page are for Tau Omega Pi Brothers only </h5>
+			<% end %>
+			
+				<%= form_tag do %>
+									
+					<div>
+						<%= label_tag :email, 'Email:'%>
+						<%= text_field_tag :email, params[:email], class: "six" %>
+					</div>
+					<div>
+						<%= label_tag :password, 'Password:'%>
+						<%= password_field_tag :password, params[:password], class: "six"%>
+					</div>	
+					<div>
+						<%= submit_tag "Login", class: "medium button"%>
+					</div>
+					
+				<% end %>						
+
+		</div>
+	</div>
+</div>

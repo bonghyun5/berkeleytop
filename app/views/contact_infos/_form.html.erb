@@ -1,0 +1,53 @@
+<%= form_for(@contact_info) do |f| %>
+  <% if @contact_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact_info.errors.count, "error") %> prohibited this contact_info from being saved:</h2>
+
+      <ul>
+      <% @contact_info.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label>Name:</label>
+    <p><%= @contact_info.name %></p>
+  </div>
+  <div class="field">
+	<label>Email:</label>
+	<p><%= @contact_info.email%></p>
+  </div>
+  <div class = "field">
+	<label>Message:</label>
+	<p><%= @contact_info.message %></p>
+  </div>
+  <% if @contact_info.status == "Contacted" %>
+  <div class = "field">
+	<label>Status</label>
+	<p><%= @contact_info.status %></p>
+  </div>
+  <div class = "field">
+	<label>Comment</label>
+	<p><%= @contact_info.comment%></p>
+  </div>
+  <% else %>
+  <div class = "field">
+	<%= f.label :status %>
+	<%= f.select :status, ContactInfo::STATUS_TYPES, prompt: "Select a status type", class: "seven" %>
+  </div>
+  <div class = "field">
+	<%= f.label :comment %>
+	<%= f.text_area :comment, rows: 6, class: "seven" %>
+  </div>
+	<% if :status == "Contacted"%>
+		<%= f.hidden_field :user, :value => session[:user_id] %>
+	<% else %>
+	<% end %>
+  <div class="actions">
+    <%= f.submit class: "medium button" %>
+  </div>
+  <% end %>
+
+<% end %>

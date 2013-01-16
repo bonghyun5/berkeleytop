@@ -1,0 +1,33 @@
+<%= render :template => 'layouts/member_header.html.erb'%>
+
+<div class = "row" id = "member-explain">
+	<div class = "twelve columns">
+		<h3> Email Signups </h3>
+		<h5>Below are emails of people who have subscribed to our list. Someone should email them. </h5>
+	</div>
+</div>
+
+<div class = "row">
+	<div class = "twelve columns">
+		<table class = "twelve" id = "contact-table">
+			<thread>
+			 <tr>
+				<th>Date</th>
+			    <th>Email Address </th>
+				
+			 </tr>
+			</thread>
+			
+			<tbody>
+			<% @emails.each do |email| %>
+			  <tr>
+				<td><%= email.created_at.strftime("%B %d | %I:%M") %></td>
+			    <td><%= email.address %></td>
+		     </tr>
+			<% end %>
+			</tbody>
+			
+		
+		</table>
+	</div>
+</div>

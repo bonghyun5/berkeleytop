@@ -1,0 +1,16 @@
+<%= render :template => 'layouts/member_header.html.erb'%>
+
+<div class = "row">
+	<div class ="eight columns" id = "forum-post-create-box">
+		<p>You are editing</p>
+	</div>
+</div>
+
+<div class = "row">
+	<div class ="twelve columns">
+
+		<%= render 'form' %>
+		<%= link_to "Back", member_index_path, class: "small button"%>
+		</br></br>
+	</div>
+</div>

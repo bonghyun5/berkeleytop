@@ -1,0 +1,89 @@
+<%= render :template => 'layouts/member_header.html.erb'%>
+<div class = "row">
+	<div class = "twelve columns">
+		<table class = "twelve center" id = "forum-table tab1">
+			
+			
+			<thread>
+			 <tr>
+				<th></th>
+				
+			 </tr>
+			</thread>
+			
+			<tbody>
+				
+			  <tr>
+				
+
+			
+				
+				<td class = "forum-post-content">
+					<p class = "forum-post-title"> <%= @forum_post.title%> </p>
+					<p class = "forum-post-info">  Submitted on <%= @forum_post.created_at.strftime("%B %d | %I:%M%p")%> by <%= User.find_by_id(@forum_post.user_id).name %> </p>
+					<% if @forum_post.description == "" %>
+					<% else %>
+					<p class = "forum-post-description"> <%= @forum_post.description%></p>
+					<% end %>
+					<p class = "forum-number-comments"> <b><%=@comments.size %> comments</b></p>
+					<% if @forum_post.user_id == session[:user_id]%>
+					 	<%= link_to "edit", edit_forum_post_path(@forum_post) %>   &nbsp; <%= link_to "delete", @forum_post, method: :delete,  data: { confirm: 'Are you sure?' } %>
+					<%end%>		
+				</td>
+				
+		     </tr>
+			</tbody>		
+		</table>
+	</div>
+</div>
+<div class = "row">
+	<div class = "twelve columns">
+		
+			<%= form_for @comment do |f| %>
+				<%= f.label :message, "Commenting as: #{User.find_by_id(session[:user_id]).name}" %> 
+				<%= f.text_area :message, class: "eight", rows: 7 %>
+				<%= f.hidden_field :user_id, :value => session[:user_id] %>
+				<%= f.hidden_field :forum_post_id, :value => @forum_post.id %>
+				<%= f.submit 'Submit', class: "small button" %>
+			<% end %>
+		
+    </div>
+</div>
+<div class = "row">
+	<div class = "twelve columns">
+		<table class = "twelve center" id = "comment-table">
+			
+			
+			<thread>
+			 <tr>
+				<th></th>
+				
+			 </tr>
+			</thread>
+			
+			<tbody>
+				
+			<% @comments.each do |comment| %>
+			  <tr>
+				<td>
+					<p id = "comment-top"><b><%= User.find_by_id(comment.user_id).name %></b>
+					   <%= comment.created_at.strftime("%B %d | %I:%M%p")%>
+					</p>
+					<p id = "comment-message"><%= comment.message %></p>
+					<% if comment.user_id == session[:user_id]%>
+					 	<%= link_to "edit", edit_comment_path(comment) %>   &nbsp; <%= link_to "delete", comment, method: :delete,  data: { confirm: 'Are you sure?' } %>
+					<%end%>
+				</td>
+		      </tr>
+			<% end %>
+			</tbody>
+		
+		</table>
+	</div>
+</div>	
+
+<div class = "row">
+	<div class = "twelve columns">
+		<%= link_to "Back", member_index_path, class: "medium button"%></br></br>
+	</div>
+</div>

@@ -1,0 +1,32 @@
+<%= form_for(@user) do |f| %>
+
+  <% if @user.errors.any? %>
+
+    <div id="error_explanation" class = "six">
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email, class: "six" %>
+  </div>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "six" %>
+  </div>
+  <div class = "field">
+	<%= f.label :approved %>
+	<%= f.text_field :approved, class: "six" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Submit", class: "medium button" %>
+  </div>
+
+<% end %>

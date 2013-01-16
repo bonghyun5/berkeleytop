@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Top</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<div class = "wrap-bottom">
+
+<nav class="top-bar">
+  <div id = "att">
+	<ul class ="left" id = "nav-left">
+		<%= image_tag("crest.png", :alt => "rss feed", id: "nav-crest") %>
+	</ul>
+    <ul>
+      <li class="name">
+      	<h1>
+      		<%= link_to "Tau Omega Pi", index_path %>
+      	</h1>
+      </li>
+    </ul>
+    <section>
+      <ul class="right">
+        <li class="has-dropdown">
+          <%= link_to "about", about_path %>
+          <ul class="dropdown">
+              <li><%= link_to "Tau Omega Pi", about_path %></li>
+              <li><%= link_to "FAQ", faq_path %></li>
+          </ul>
+        </li>
+        <li class ="has-dropdown">
+          <%= link_to "brothers", brothers_path %>
+          <ul class="dropdown">
+              <li><%= link_to "Active Brothers", brothers_path %></li>
+              <li><%= link_to "Officers", officers_path %></li>
+          </ul>
+        </li>
+        <li>
+        	<%= link_to "rush", rush_path %>
+        </li>
+        <li>
+        	<%= link_to "photos", media_path %>
+        </li>
+        <li>
+        	<%= link_to "contact", contact_path %>
+        </li>
+
+		  <% if logged_in %>
+			
+			<li class ="has-dropdown" id = "nav-right">
+				<%= link_to User.find_by_id(session[:user_id]).name, member_index_path %>
+				<ul class="dropdown">
+					<li> <%= link_to "Home", member_index_path %></li>
+					<li> <%= link_to "Logout", logout_path, :method => :delete %></li>
+				</ul>
+			</li>
+			
+		  <% else %>
+			<li id = "nav-right">
+          	<%= link_to "login", login_path %>
+		  <% end %>
+
+        </li>
+      </ul>
+    </section>
+  </div>
+</nav>
+
+<%= yield %>
+<div class="push"></div>
+</div>
+
+<div class = "very-bottom">
+<div id = "subscription-container">
+  <div class = "row">
+    <div class = "seven columns" id = "sub">
+      <h5>Interested in more information? Sign up for our mailing list or contact us</h5>
+    </div>
+
+    <div class = "five columns">
+      </br>
+      <div class = "row" id = "subscribe">
+
+        <%= form_for Email.new, remote: true do |f| %>
+
+          <div class = "eight columns">
+            <%= f.text_field :address, placeholder: "bob@berkeley.edu" %>
+          </div>
+
+          <%= f.submit 'Submit', class: "small button", id: "submit-button" %>
+        <% end %>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div id = "footer-container">
+<footer class="row" id = "footer">
+    <div class="twelve columns">
+      	<div class="row">
+        	<div class="twelve columns">
+          		<p>&copy; Tau Omega Pi | 2012</p>
+       		</div>
+		</div>
+	</div>
+</footer> 
+</div>
+</div>
+
+
+</body>
+</html>

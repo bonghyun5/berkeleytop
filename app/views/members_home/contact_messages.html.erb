@@ -1,0 +1,49 @@
+<%= render :template => 'layouts/member_header.html.erb'%>
+
+<div class = "row" id = "member-explain">
+	<div class = "twelve columns">
+		<h3>Contact Messages </h3>
+		<h5>Below are questions and/or comments left by people viewing this website. If you would like to respond to these messages, please make sure that they have not been responded already by another member. </h5>
+	</div>
+</div>
+
+<div class = "row">
+	<div class = "twelve columns">
+		<table class = "twelve center" id = "contact-table">
+			<thread>
+			 <tr>
+				<th>Date</th>
+			    <th>Name</th>
+			    <th>Email</th>
+			    <th>Message</th>
+				<th>Status</th>
+				<th>Contacted By</th>
+			    <th></th>
+				
+			 </tr>
+			</thread>
+			
+			<tbody>
+			<% @contact_infos.each do |contact_info| %>
+			  <tr>
+				<td ><%= contact_info.created_at.strftime("%B %d | %I:%M") %></td>
+			    <td><%= contact_info.name %></td>
+			    <td><%= contact_info.email %></td>
+			    <td><%= truncate contact_info.message, length: 30 %></td>
+				<td><%= contact_info.status %></td>
+				<td>
+					<% if contact_info.user != nil %>
+						<%= User.find(contact_info.user).name %>
+					<% else %>
+					   
+					<% end %>
+				</td>
+				<td><%= link_to "View", edit_contact_info_path(contact_info) %></td>
+		     </tr>
+			<% end %>
+			</tbody>
+			
+		
+		</table>
+	</div>
+</div>

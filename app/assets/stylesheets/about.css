@@ -1,0 +1,8 @@
+#about-pic1
+{
+	width: 400px;
+	float: right;
+	border-radius: 5px;
+	margin: 0 30px 10px 30px;
+	box-shadow: 5px 5px 10px grey;
+}

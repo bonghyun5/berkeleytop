@@ -1,0 +1,22 @@
+<%= render :template => 'layouts/member_header.html.erb'%>
+
+<div class = "main-content" id ="login-main">
+	<div class = "row">
+		<div class ="two columns">
+			<ul class = "side-nav">
+				  <li><%= link_to "← Home", index_path%></li>		
+				  <li class="divider"></li>
+				  <li><%= link_to "Login", login_path%></li>
+				  <li class="active"><%= link_to "Register", register_url %></li>
+
+			</ul>
+		</div>
+		<div class ="ten columns" id = "register-form">
+			<h4> Register </h4>
+			<h5> Please note that only the brothers of Tau Omega Pi can register</h5>
+
+			<%= render 'form' %>
+ 
+		</div>
+	</div>
+</div>

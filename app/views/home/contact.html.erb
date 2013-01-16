@@ -1,0 +1,52 @@
+<header class = "sub-links">
+	<div class = "row">
+		<div class = "twelve columns">
+			<h1> Contact Us </h1>
+			<h4> Questions? Concerns? Let us know!</h4>
+		</div>
+	</div>
+</header>
+
+<div class = "main-content">
+	<div class = "row">
+		<div class ="two columns">
+			<ul class = "side-nav">
+				  <li><%= link_to "← Home", index_path%></li>		
+				  <li class="divider"></li>
+				  <li class = "active"><%= link_to "Contact Us", contact_path%></li>
+			</ul>
+		</div>
+
+		<div class ="ten columns" id = "contact-message">
+
+			<% if notice %>
+				<h5> <%= notice %> </h5>
+			<% else %>
+			
+				<%= form_for @contact_info do |f| %>
+					<%= f.label :name, "Name" %> 
+					<% if @contact_info.errors[:name].any? %>
+						<h6> Invalid Name </h6>
+					<% end %>
+					<%= f.text_field :name, class: "six", placeholder: "Bob the Builder" %>
+
+					<%= f.label :email, "Email" %>
+					<% if @contact_info.errors[:email].any? %>
+						<h6> Invalid Email </h6>
+					<% end %>
+					<%= f.text_field :email, class: "seven", placeholder: "Bob@builder.com" %>
+
+					<%= f.label :message, "Message" %>
+					<% if @contact_info.errors[:message].any? %>
+						<h6> Invalid message </h6>
+					<% end %>
+					<%= f.text_area :message, id: "message-area" %>
+
+					<%= f.submit 'Submit', class: "medium button" %>
+				<% end %>
+				
+			<% end %>
+
+		</div>
+	</div>
+</div>

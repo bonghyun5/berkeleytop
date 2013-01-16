@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @directory.user_id %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @directory.year %>
+</p>
+
+<p>
+  <b>Major:</b>
+  <%= @directory.major %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @directory.phone %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @directory.address %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @directory.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_directory_path(@directory) %> |
+<%= link_to 'Back', directories_path %>

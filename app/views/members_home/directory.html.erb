@@ -1,0 +1,48 @@
+<%= render :template => 'layouts/member_header.html.erb'%>
+
+<div class = "row" id = "member-explain">
+	<div class = "twelve columns">
+		<h3>Brothers Directory </h3>
+		<h5>Here's the directory of our brothers. Please update yours accordingly. </h5>
+	</div>
+</div>
+
+
+<div class = "row">
+	<div class = "twelve columns">
+		<table class = "twelve" id = "contact-table">
+			<thread>
+			 <tr>
+				<th>Name</th>
+			    <th>Year</th>
+			    <th>Major</th>
+			    <th>Email</th>
+				<th>Phone</th>
+				<th>Address</th>				
+			 </tr>
+			</thread>
+			
+			<tbody>
+			<% @directories.each do |directory| %>
+			  <tr>
+				<td><%= User.find(directory.user_id).name %></td>
+			    <td><%= directory.year %></td>
+			    <td><%= directory.major %></td>
+			    <td><%= directory.user.email %></td>
+				<td><%= directory.phone %></td>
+				<td><%= directory.address %></td>				
+		     </tr>
+			<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class = "row">
+	<div class = "twelve columns">
+		<% if Directory.find_by_user_id(session[:user_id]).nil? %>
+			<%= link_to "Create Info", new_directory_path, class: "medium button" %>
+		<% else %>
+			<%= link_to "Edit Info", edit_directory_path(Directory.find_by_user_id(session[:user_id])), class: "medium button" %>
+		<% end %>
+	</div>
+</div>

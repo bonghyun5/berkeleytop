@@ -1,0 +1,42 @@
+<%= render :template => 'layouts/member_header.html.erb'%>
+
+<div class = "row">
+	<div class = "twelve columns">
+		<table class = "twelve center" id = "forum-table">
+			
+			
+			<thread>
+			 <tr>
+				<th></th>
+				
+			 </tr>
+			</thread>
+			
+			<tbody>
+				
+			<% @forum_posts.each_with_index do |post, index| %>
+			  <tr>
+				
+				
+				<td class = "forum-post-content">
+					<p class = "forum-post-title"> <%= link_to post.title, post %> </p>
+					<p class = "forum-post-info">  Submitted on <%= post.created_at.strftime("%B %d | %I:%M%p")%> by <%= User.find_by_id(post.user_id).name %> </p>
+					<p class = "forum-number-comments"> <%= Comment.count(conditions: {:forum_post_id => post.id})%> comments 		</p>		
+					<% if post.user_id == session[:user_id]%>
+					 	<%= link_to "edit", edit_forum_post_path(post) %>   &nbsp; <%= link_to "delete", post, method: :delete,  data: { confirm: 'Are you sure?' } %>
+					<%end%>
+				</td>
+				
+		     </tr>
+			<% end %>
+			</tbody>
+		
+		</table>
+	</div>
+</div>
+<div class = "row">
+	<div class = "twelve columns">
+		<%= link_to "Submit a Post", new_forum_post_path, class: "medium button" %>
+		</br></br>
+	</div>
+</div>

@@ -1,0 +1,34 @@
+<%= form_for(@directory) do |f| %>
+  <% if @directory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@directory.errors.count, "error") %> prohibited this directory from being saved:</h2>
+
+      <ul>
+      <% @directory.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+	<%= f.label :year %>
+	<%= f.select :year, Directory::YEAR_TYPES, prompt: "Select your year", class: "seven" %><br /> <br />
+  </div>
+  <div class="field">
+    <%= f.label :major %><br />
+    <%= f.text_field :major, class: "four" %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone, class: "four" %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, class: "nine" %>
+  </div>
+	<%= f.hidden_field :user_id, :value => session[:user_id] %>
+  <div class="actions">
+    <%= f.submit "Edit Contact", class: "medium button"%>
+  </div>
+<% end %>
