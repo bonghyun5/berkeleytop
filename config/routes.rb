@@ -1,4 +1,8 @@
 Top::Application.routes.draw do
+  resources :rush_applications
+  
+  get "application" => "rush_applications#new"
+
   resources :comments
 
 

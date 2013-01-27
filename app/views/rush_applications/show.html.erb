@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @rush_application.name %>
+</p>
+
+<p>
+  <b>Sex:</b>
+  <%= @rush_application.sex %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @rush_application.address %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%= @rush_application.phone_number %>
+</p>
+
+<p>
+  <b>Mobile number:</b>
+  <%= @rush_application.mobile_number %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @rush_application.email %>
+</p>
+
+<p>
+  <b>Question1:</b>
+  <%= @rush_application.question1 %>
+</p>
+
+<p>
+  <b>Question2:</b>
+  <%= @rush_application.question2 %>
+</p>
+
+<p>
+  <b>Question3:</b>
+  <%= @rush_application.question3 %>
+</p>
+
+
+<%= link_to 'Edit', edit_rush_application_path(@rush_application) %> |
+<%= link_to 'Back', rush_applications_path %>

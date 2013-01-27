@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130115081313) do
+ActiveRecord::Schema.define(:version => 20130126022055) do
 
   create_table "comments", :force => true do |t|
     t.text     "message"
@@ -57,6 +57,20 @@ ActiveRecord::Schema.define(:version => 20130115081313) do
     t.integer  "downvote",    :default => 0
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+  end
+
+  create_table "rush_applications", :force => true do |t|
+    t.string   "name"
+    t.string   "sex"
+    t.string   "address"
+    t.string   "phone_number"
+    t.string   "mobile_number"
+    t.string   "email"
+    t.text     "question1"
+    t.text     "question2"
+    t.text     "question3"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "users", :force => true do |t|

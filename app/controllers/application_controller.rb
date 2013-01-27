@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :logged_in, :super_admin_authorize
 
-  #before_filter :authorize
+  before_filter :authorize
   
   protected
     def authorize

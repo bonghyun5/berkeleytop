@@ -1,0 +1,53 @@
+<%= form_for(@rush_application) do |f| %>
+  <% if @rush_application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rush_application.errors.count, "error") %> prohibited this rush_application from being saved:</h2>
+
+      <ul>
+      <% @rush_application.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :sex %><br />
+    <%= f.text_field :sex %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile_number %><br />
+    <%= f.text_field :mobile_number %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :question1 %><br />
+    <%= f.text_area :question1 %>
+  </div>
+  <div class="field">
+    <%= f.label :question2 %><br />
+    <%= f.text_area :question2 %>
+  </div>
+  <div class="field">
+    <%= f.label :question3 %><br />
+    <%= f.text_area :question3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
