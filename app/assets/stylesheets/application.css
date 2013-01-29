@@ -18,6 +18,18 @@ html
 	
 }
 
+#myModal{
+	margin-top: -90px;
+	
+}
+
+.modalImg{
+	height: 650px;
+	padding: 0 10px;
+	margin-left: 10px;
+}
+
+
 body
 {
 	background: transparent !important;
